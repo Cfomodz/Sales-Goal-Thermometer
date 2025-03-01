@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static exports for Vercel
-  output: 'export',
-  
-  // Disable server-side rendering for cleaner deployment
-  // as our API is just a simulation for now
-  distDir: 'out',
+  // Only enable static exports for production builds
+  ...(process.env.NODE_ENV === 'production' 
+    ? { 
+        output: 'export',
+        distDir: 'out',
+      } 
+    : {}),
   
   // Image optimization
   images: {

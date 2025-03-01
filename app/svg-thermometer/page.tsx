@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import SvgThermometer from '../../src/components/SvgThermometer';
+import SvgThermometer from '@/components/SvgThermometer';
 import Link from 'next/link';
 
 export default function SvgThermometerPage() {

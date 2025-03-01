@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import SvgThermometer from '../src/components/SvgThermometer';
-import ProgressBar from '../src/components/ProgressBar';
+import SvgThermometer from '@/components/SvgThermometer';
+import ProgressBar from '@/components/ProgressBar';
 import Link from 'next/link';
 
 interface ThermometerData {
