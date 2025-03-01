@@ -4,8 +4,12 @@ services:
     env: static
     buildCommand: npm install; npm run build
     staticPublishPath: ./out
-    # Uncomment the following for auto deploys
-    # autoDeploy: true
+    # No start command needed for static sites
+    # The static site will be served directly from the staticPublishPath
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     headers:
       - path: /**
         name: Cache-Control
