@@ -1,0 +1,14 @@
+{
+    "goal_amount": 10000,
+    "initial_progress": 8600,
+    "thermometer": {
+        "layout": "1",
+        "fill_color": "rgba(231, 97, 81, 1)",
+        "goal_amount": 1000,
+        "show_goal_amount": true,
+        "show_progress_percentage": true,
+        "show_progress_amount": true,
+        "animate_progress_fill": true
+    },
+    "countdown_date": "12/20/2025 10:1 AM"
+} 
