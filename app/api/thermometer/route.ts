@@ -3,7 +3,8 @@ import fs from 'fs';
 import path from 'path';
 
 // Configure the route for static export
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
+export const revalidate = false; // This makes it fully static for export
 
 // Define the config interface
 interface ThermometerConfig {
@@ -51,6 +52,7 @@ try {
   };
 }
 
+// Pre-compute the data at build time for static export
 export async function GET() {
   try {
     console.log('API route called');

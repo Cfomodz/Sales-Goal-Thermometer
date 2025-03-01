@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sales-goal-thermometer
+    env: static
+    buildCommand: npm install; npm run build
+    staticPublishPath: ./out
+    # Uncomment the following for auto deploys
+    # autoDeploy: true
+    headers:
+      - path: /**
+        name: Cache-Control
+        value: public, max-age=31536000, immutable 
